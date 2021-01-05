@@ -14,10 +14,9 @@ app = Flask(__name__)
 
 app.wsgi_app = middleware(app.wsgi_app)
 
-
 @app.route('/')
 def hello():
     return render_template('success.html')
 
 if __name__ == "__main__":
-    app.run('127.0.0.1', '5000', debug=True)
+    app.run()
